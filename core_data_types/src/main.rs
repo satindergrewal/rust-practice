@@ -31,4 +31,14 @@ fn main() {
     println!("{} is a char, size = {} bytes", d, mem::size_of_val(&d));
 
     // f32 f64 IEEE754
+
+    let e: f32 = 2.5;
+    println!("{}, size = {} bytes", e, mem::size_of_val(&e));
+    
+    // by default non-whole numbers, floating-point numbers, are f64 type
+    let e64 = 2.5;
+    println!("{}, size = {} bytes", e64, mem::size_of_val(&e64));
+
+    let g: bool = false; // true
+    println!("{}, size = {} bytes", g, mem::size_of_val(&g));
 }
