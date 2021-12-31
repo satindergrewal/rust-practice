@@ -23,7 +23,7 @@ fn main() {
     println!("{:?}", combined);
     println!("last element is {}", (combined.1).1);
 
-    let ((c, d), (e, f)) = combined;
+    let ((_c, _d), (_e, _f)) = combined;
 
     // tuple of different elements
     let foo = (true, 42.0, -1i8);
