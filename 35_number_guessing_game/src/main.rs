@@ -7,7 +7,7 @@ use std::io::stdin;
 
 fn main() {
     let mut rng = thread_rng();
-    let number: i64 = rng.gen_range(1..100);
+    let number: i64 = rng.gen_range(1..10);
 
     loop {
         println!("Enter your guess: ");
@@ -18,10 +18,10 @@ fn main() {
             Ok(_) => {
                 // we trim the end for charaters like line break
                 // then we parse with 64bit integer
-                let parsed = buffer.trim_end().parse()::<i64>;
+                let parsed = buffer.trim_end().parse::<i64>();
                 match parsed {
                     Ok(guess) => {
-                        if guess < 1 || guess > 100 {
+                        if guess < 1 || guess > 10 {
                             println!("Your guess is out of range");
                         } else if guess < number {
                             println!("Your guess is too low");
